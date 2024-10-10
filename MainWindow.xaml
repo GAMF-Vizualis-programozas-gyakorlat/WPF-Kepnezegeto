@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPFKepnezegeto.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFKepnezegeto"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+	<Grid Name="grRács">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="150"/>
+			<ColumnDefinition />
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="25"/>
+			<RowDefinition/>
+			<RowDefinition Height="25"/>
+		</Grid.RowDefinitions>
+		<Button x:Name="btKönyvtárVálasztó" Grid.Row="0" Grid.Column="0"
+				Content="Könyvtárválasztás..." Click="btKönyvtárVálasztó_Click"/>
+		<ScrollViewer Name="swKépek" VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.RowSpan="2">
+			<WrapPanel Name="wpKépek" HorizontalAlignment="Right"/>
+		</ScrollViewer>
+		<GridSplitter ResizeDirection="Columns" Grid.Column="0" Width="3" />
+		<Image Name="imNagyKép" MinWidth="100" MinHeight="100" Grid.Row="0"
+		Grid.Column="1" Grid.RowSpan="2" Stretch="Uniform"
+		HorizontalAlignment="Center"/>
+		<TextBlock Name="tbKépNév" Height="15" VerticalAlignment="Center"
+		Grid.Row="2" Grid.Column="1" Margin="5,0,0,0"/>
+
+	</Grid>
+</Window>
